@@ -1,3 +1,5 @@
+mod y2021;
+
 fn main() {
-    println!("Hello, world!");
+    y2021::day1::solve();
 }
