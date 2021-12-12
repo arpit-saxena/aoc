@@ -1,3 +1,5 @@
+#![feature(drain_filter)]
+
 mod y2021;
 
 use std::env;
@@ -7,6 +9,7 @@ fn main() {
     match day {
         1 => y2021::day1::solve(),
         2 => y2021::day2::solve(),
+        3 => y2021::day3::solve(),
         _ => panic!("Don't know how to solve")
     };
 }
