@@ -8,7 +8,11 @@ pub fn solve() {
 
 fn get_input() -> Vec<Vec<char>> {
     let file = File::open("inputs/2021/3.txt").expect("Expected input file for day 3 as 3.txt");
-    return BufReader::new(file).lines().map(|l| l.unwrap()).map(|s| s.chars().collect()).collect();
+    return BufReader::new(file)
+        .lines()
+        .map(|l| l.unwrap())
+        .map(|s| s.chars().collect())
+        .collect();
 }
 
 fn solve_part1() {
@@ -37,7 +41,7 @@ fn solve_part1() {
 
 fn solve_part2() {
     let mut nums = get_input();
-    
+
     // Max
     let mut i = 0;
     while nums.len() > 1 {
@@ -51,7 +55,13 @@ fn solve_part2() {
         // println!("{} / {}", freq1, nums.len());
 
         let remove0 = freq1 >= (nums.len() - freq1);
-        nums.drain_filter(|num| if remove0 { num[i] == '0' } else { num[i] == '1' });
+        nums.drain_filter(|num| {
+            if remove0 {
+                num[i] == '0'
+            } else {
+                num[i] == '1'
+            }
+        });
         // println!("{:?}", nums.iter().map(|arr| arr.iter().collect::<String>()).collect::<Vec<_>>());
         i += 1;
     }
@@ -87,7 +97,6 @@ fn solve_part2() {
             co2 += 1;
         }
     }
-
 
     println!("Part 2:\n\t{}", oxygen * co2);
 }

@@ -13,7 +13,8 @@ enum Command {
 }
 
 fn get_input() -> Vec<Command> {
-    let file = File::open("inputs/2021/2.txt").expect("Expected input file for day 2 as input2.txt");
+    let file =
+        File::open("inputs/2021/2.txt").expect("Expected input file for day 2 as input2.txt");
     let mut vec = Vec::new();
     for line in BufReader::new(file).lines() {
         let line = line.unwrap();
@@ -55,7 +56,7 @@ fn solve_part2() {
             Command::Forward(x1) => {
                 x += x1;
                 y += aim * x1;
-            },
+            }
             Command::Down(y1) => aim += y1,
             Command::Up(y1) => aim -= y1,
         };

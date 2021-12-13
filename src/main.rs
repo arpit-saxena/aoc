@@ -10,6 +10,7 @@ fn main() {
         1 => y2021::day1::solve(),
         2 => y2021::day2::solve(),
         3 => y2021::day3::solve(),
-        _ => panic!("Don't know how to solve")
+        4 => y2021::day4::solve(),
+        _ => panic!("Don't know how to solve"),
     };
 }
