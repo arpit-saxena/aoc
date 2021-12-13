@@ -48,9 +48,9 @@ fn solve_part2() {
     }
 
     let fishes = get_input();
-    let total_fishes = fishes.iter().fold(0 as i64, |cum, timer| {
-        cum + 1 + dp[256][*timer as usize]
-    });
+    let total_fishes = fishes
+        .iter()
+        .fold(0 as i64, |cum, timer| cum + 1 + dp[256][*timer as usize]);
 
     println!("Part 2:\n\t{}", total_fishes);
 }
