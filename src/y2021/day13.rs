@@ -53,9 +53,9 @@ impl Paper {
         for y in 0..self.grid[0].len() {
             for x in 0..self.grid.len() {
                 if self.grid[x][y] {
-                    print!("#");
+                    print!("██");
                 } else {
-                    print!(".");
+                    print!("  ");
                 }
             }
             println!();
