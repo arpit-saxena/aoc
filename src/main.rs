@@ -1,4 +1,6 @@
 #![feature(drain_filter)]
+#[macro_use]
+extern crate text_io;
 
 mod y2021;
 
@@ -11,6 +13,7 @@ fn main() {
         2 => y2021::day2::solve(),
         3 => y2021::day3::solve(),
         4 => y2021::day4::solve(),
+        5 => y2021::day5::solve(),
         _ => panic!("Don't know how to solve"),
     };
 }
