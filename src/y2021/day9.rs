@@ -68,7 +68,7 @@ fn solve_part2() {
         }
 
         count
-    };
+    }
 
     for (i, row) in grid.iter().enumerate() {
         for (j, &num) in row.iter().enumerate() {
