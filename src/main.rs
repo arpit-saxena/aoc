@@ -20,6 +20,7 @@ fn main() {
         9 => y2021::day9::solve(),
         10 => y2021::day10::solve(),
         13 => y2021::day13::solve(),
+        14 => y2021::day14::solve(),
         _ => panic!("Don't know how to solve"),
     };
 }
